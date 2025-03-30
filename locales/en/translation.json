@@ -1,0 +1,23 @@
+{
+  "home_page_title": "Home Page",
+  "page_title": "Page {{pageNum}}",
+  "login": "Log In",
+  "welcome_user": "Welcome, User!",
+  "account": "Account",
+  "logout": "Log Out",
+  "menu": "Menu",
+  "copyright": "© {{year}} {{domain}} All rights reserved.",
+  "sidebar_home": "Home",
+  "sidebar_close": "Close",
+  "home_welcome": "Welcome to SpecNazz IT",
+  "home_tagline": "Darius Visockis - Fachinformatiker Systemintegration",
+  "home_location": "Born 1992.02.20 | Living in Bremerhaven, Germany",
+  "home_intro1": "Leveraging the efficiency and precision of \"Special Forces in IT\", this is my digital headquarters. As a trainee Fachinformatiker Systemintegration, I focus on delivering robust solutions, efficient problem-solving, and continuous learning across servers, networking, programming, cloud computing, and particularly <span class=\"security-highlight\">AWS security</span>.",
+  "home_intro2": "Explore my portfolio to see projects, browse code examples (Python, C++, Java), and discover work with microcontrollers and AI tools. This site showcases my skills, journey, and dedication to securing and optimizing IT systems.",
+  "home_cta_projects": "View Projects",
+  "home_cta_contact": "Contacts",
+  "home_cta_about": "Learn More",
+  "page_heading": "Page {{pageNum}}",
+  "page_content": "This is the content for Page {{pageNum}}.",
+  "page_blank": "This page is currently blank."
+}

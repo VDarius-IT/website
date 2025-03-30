@@ -1,0 +1,31 @@
+<%- include('../partials/header', { title: title }) %>
+<%- include('../partials/sidebar') %>
+
+<!-- Removed inline styles - now in style.css -->
+
+<section id="home">
+  <div class="hero-section">
+    <img src="/images/specnazz.jpg" alt="Darius Visockis" class="hero-image"/> <!-- Assuming image moved to public/images -->
+    <h2>Welcome</h2>
+    <h3>My Tagline</h3>
+    <p>
+      My Location
+    </p>
+  </div>
+  <div class="home-intro">
+    <p>
+      Introduction paragraph 1.
+    </p>
+    <p>
+      Introduction paragraph 2.
+    </p>
+  </div>
+  <div class="cta-buttons">
+      <!-- Removed onclick, hrefs point to placeholder pages for now -->
+      <a href="/page1" class="cta-button">Projects</a>
+      <a href="/page2" class="cta-button">Contact</a>
+      <a href="/page3" class="cta-button">About</a>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>

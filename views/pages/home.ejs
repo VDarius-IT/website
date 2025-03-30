@@ -1,0 +1,31 @@
+<%- include('../partials/header', { titleKey: 'home_page_title', t: t, i18n: i18n }) %>
+<%- include('../partials/sidebar') %>
+
+<!-- Removed inline styles - now in style.css -->
+
+<section id="home">
+  <div class="hero-section">
+    <img src="/images/specnazz.jpg" alt="Darius Visockis" class="hero-image" /> <!-- Assuming image moved to public/images -->
+    <h2><%= t('home_welcome') %></h2>
+    <h3><%= t('home_tagline') %></h3>
+    <p>
+      <%= t('home_location') %>
+    </p>
+  </div>
+  <div class="home-intro">
+    <p>
+      <%- t('home_intro1') %> <!-- Use unescaped output for HTML in translation -->
+    </p>
+    <p>
+      <%= t('home_intro2') %>
+    </p>
+  </div>
+  <div class="cta-buttons">
+    <!-- Removed onclick, hrefs point to placeholder pages for now -->
+    <a href="/page1" class="cta-button"><%= t('home_cta_projects') %></a>
+    <a href="/page2" class="cta-button"><%= t('home_cta_contact') %></a>
+    <a href="/page3" class="cta-button"><%= t('home_cta_about') %></a>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>

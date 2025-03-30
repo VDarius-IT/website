@@ -1,0 +1,397 @@
+/* Basic Reset & Body */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; /* Nicer font stack */
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 0; /* Adjust when sidebar is open */
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* Header */
+.site-header {
+    background-color: #f1f1f1;
+    padding: 0 20px; /* Adjusted padding */
+    border-bottom: 1px solid #ccc;
+    height: 60px; /* Fixed header height */
+    box-sizing: border-box; /* Include padding/border in height */
+    position: fixed; /* Keep header fixed at the top */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1001; /* Ensure header is above sidebar */
+}
+
+.header-container {
+    display: flex;
+    height: 100%; /* Make container fill header height */
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* New styles for header structure */
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right {
+    margin-left: auto; /* Push right group to the end */
+}
+
+.site-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit; /* Inherit color from theme */
+    margin-left: 15px;
+}
+
+.site-version {
+    font-size: 1em;
+    margin-left: 100px;
+    opacity: 1;
+    color: #e18888;
+    /* align-self: flex-end;  Optional: if needed for fine-tuning */
+    /* padding-bottom: 2px; */
+}
+
+/* Adjust button margins if needed, remove old rule */
+.header-left button,
+.header-right button {
+    margin-left: 10px; /* Keep left margin for buttons within groups */
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded buttons */
+}
+.header-left button:first-child {
+    margin-left: 0; /* No left margin for the very first button (theme toggle) */
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 60px; /* Position below the fixed header */
+    right: -150px; /* Start hidden off-screen (matches new width) */
+    width: 150px; /* User requested width */
+    height: calc(100vh - 100px); /* Fill height between fixed header (60px) and footer (40px), use vh */
+    background-color: #e9e9e9;
+    padding: 20px; /* Keep internal padding */
+    box-sizing: border-box; /* Include padding/border in width/height */
+    border-top-left-radius: 8px; /* Rounded corner */
+    border-bottom-left-radius: 8px; /* Rounded corner */
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    transition: right 0.3s ease-in-out;
+    z-index: 1000; /* Below header */
+    overflow-y: auto;
+}
+
+/* Add padding to body/main content to prevent overlap with fixed header */
+body {
+    padding-top: 60px; /* Match header height */
+    padding-bottom: 40px; /* Match footer height */
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav ul li a {
+    display: block;
+    padding: 10px 15px; /* Added horizontal padding */
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.2s ease-in-out; /* Smooth hover */
+    border-radius: 5px; /* Apply radius always for consistency */
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #ddd;
+    /* border-radius: 5px; */ /* Moved radius to base style */
+}
+
+#close-sidebar-button {
+    margin-top: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded button */
+}
+
+/* Footer */
+.site-footer-bottom {
+    background-color: #f1f1f1;
+    /* text-align: center; */ /* Replaced by flex */
+    /* padding: 10px 0; */ /* Replaced by flex */
+    border-top: 1px solid #ccc;
+    /* text-align: center; */ /* Replaced by flex */
+    /* padding: 10px 0; */ /* Replaced by flex */
+    border-top: 1px solid #ccc;
+    /* Removed margin-top: auto; */
+    position: fixed; /* Make footer sticky */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px; /* Fixed footer height */
+    box-sizing: border-box; /* Include padding/border in height */
+    /* Removed display: flex; align-items: center; justify-content: center; */
+    padding: 0 20px; /* Add padding to footer bar */
+    z-index: 1000; /* Ensure it's above content but below header/sidebar if needed */
+}
+
+.footer-content { /* New rule for layout inside footer */
+    display: flex;
+    /* Removed justify-content: space-between; */
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Adjust copyright margin */
+.footer-content p { /* Target the p tag directly */
+    margin: 0; /* Remove default paragraph margin */
+    font-size: 0.9em;
+    flex-grow: 1; /* Allow paragraph to take remaining space */
+    text-align: center; /* Center text within its space */
+    /* Removed width: 100%; */
+}
+
+
+/* Theme Modes */
+html.light-mode body { /* Target body within html.light-mode */
+    background-color: #ffffff;
+    color: #333333;
+}
+html.light-mode .site-header,
+html.light-mode .site-footer-bottom {
+    background-color: #e6eaeb;
+    border-color: #c6c8ca;
+}
+/* Removed light mode language switcher styles */
+html.light-mode .sidebar {
+     background-color: #e9e9e9;
+     box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+}
+html.light-mode .sidebar nav ul li a {
+    color: #333;
+}
+html.light-mode .sidebar nav ul li a:hover {
+    background-color: #ddd;
+}
+/* Ensure buttons in light mode have default styles if overridden by dark mode */
+html.light-mode button {
+    background-color: initial; /* Or specific light mode button styles */
+    color: initial;
+    border: initial;
+}
+html.light-mode button:hover {
+     background-color: #eee; /* Example light hover */
+}
+
+
+html.dark-mode body { /* Target body within html.dark-mode */
+    background-color: #272847;
+    color: #f1f1f1;
+}
+html.dark-mode .site-header,
+html.dark-mode .site-footer-bottom {
+    background-color: #110a33;
+    border-color: #555;
+}
+/* Removed dark mode language switcher styles */
+html.dark-mode .sidebar {
+     background-color: #444444;
+     box-shadow: -2px 0 5px rgba(255,255,255,0.1);
+}
+html.dark-mode .sidebar nav ul li a {
+    color: #f1f1f1;
+}
+html.dark-mode .sidebar nav ul li a:hover {
+    background-color: #555;
+}
+html.dark-mode button { /* General button styling for dark mode */
+    background-color: #555;
+    color: #f1f1f1;
+    border: 1px solid #777;
+}
+/* Removed extra brace */
+html.dark-mode button:hover {
+    background-color: #666;
+}
+
+/* Homepage Specific Styles */
+.hero-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.hero-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 20px auto;
+  display: block;
+}
+.hero-section h2 {
+  margin-bottom: 10px;
+  border: none;
+}
+.hero-section h3 {
+  margin-bottom: 15px;
+}
+.home-intro p {
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-buttons {
+  text-align: center;
+  margin-top: 30px;
+}
+.cta-button { /* Specific styles for homepage call-to-action buttons */
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    /* border-radius: 5px; /* Applied globally */
+    margin: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.cta-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+.security-highlight {
+  font-weight: bold;
+}
+/* Homepage Theme-specific overrides */
+html.light-mode .security-highlight { color: #007bff; } /* Example blue */
+html.dark-mode .security-highlight { color: #61dafb; } /* Example light blue */
+html.light-mode .hero-image { border: 3px solid #ccc; }
+html.dark-mode .hero-image { border: 3px solid #555; }
+/* Ensure CTA buttons use theme colors */
+html.light-mode .cta-button {
+    background-color: #007bff; /* Example */
+    color: white;
+}
+html.dark-mode .cta-button {
+    background-color: #61dafb; /* Example */
+    color: #111;
+}
+
+
+/* Basic Responsive Styles */
+@media (max-width: 767px) {
+    .site-header {
+        padding: 0 10px; /* Reduce padding */
+    }
+    .site-title {
+        font-size: 1.2em; /* Reduce title size */
+        margin-left: 10px;
+    }
+    .site-version {
+        display: none; /* Hide version text */
+    }
+    .header-left button,
+    .header-right button {
+        padding: 4px 8px; /* Slightly smaller buttons */
+        margin-left: 5px;
+    }
+    .site-footer-bottom {
+        /* padding: 0 10px; /* Remove padding adjustment */
+    }
+    .copyright {
+        font-size: 0.8em; /* Smaller copyright */ /* Keep this */
+    }
+    /* Removed lang-option responsive styles */
+    .site-content {
+        padding: 15px; /* Reduce content padding */ /* Keep this */
+    }
+}
+
+/* Language Toggle Switch Styles */
+.language-toggle-switch {
+  display: flex;
+  align-items: center;
+  /* Removed absolute positioning */
+  /* Removed margin-right: auto; */ /* Let flexbox handle spacing */
+}
+
+.language-label-en,
+.language-label-de {
+  font-size: 0.8em; /* Target: 40% smaller than original 0.8em */
+  font-weight: bold;
+  margin: 0 3px; /* Keep current margin */
+}
+
+#language-switch-checkbox {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+.language-switch-label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 30px; /* Target: 40% smaller than original 50px */
+  height: 15px; /* Target: 40% smaller than original 25px */
+  background: grey; /* Default track color */
+  display: block;
+  border-radius: 100px; /* Keep fully rounded */
+  position: relative;
+}
+
+/* Thumb */
+.language-switch-label:after {
+  content: '';
+  position: absolute;
+  top: 1px; /* Target: 40% smaller than original 2px */
+  left: 1px; /* Target: 40% smaller than original 2px */
+  width: 13px; /* Target: 40% smaller than original 21px */
+  height: 13px; /* Target: 40% smaller than original 21px */
+  background: #fff; /* Thumb color */
+  border-radius: 90px; /* Keep rounded */
+  transition: 0.3s;
+}
+
+#language-switch-checkbox:checked + .language-switch-label {
+  background: #007bff; /* Track color when checked (e.g., DE active) */
+}
+
+/* Thumb position when checked */
+#language-switch-checkbox:checked + .language-switch-label:after {
+  left: calc(100% - 1px); /* Target: Adjusted offset based on new padding */
+  transform: translateX(-100%);
+}
+
+.language-switch-label:active:after {
+  width: 26px; /* Optional: slightly wider thumb on click */
+}
+
+/* Theme adjustments for switch */
+html.dark-mode .language-switch-label {
+    background: #555;
+}
+html.dark-mode #language-switch-checkbox:checked + .language-switch-label {
+    background: #61dafb; /* Example dark mode active color */
+}
+html.dark-mode .language-label-en,
+html.dark-mode .language-label-de {
+    color: #f1f1f1; /* Ensure labels are visible */
+}

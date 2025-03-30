@@ -1,0 +1,23 @@
+{
+  "home_page_title": "Startseite",
+  "page_title": "Seite {{pageNum}}",
+  "login": "Anmelden",
+  "welcome_user": "Willkommen, Benutzer!",
+  "account": "Konto",
+  "logout": "Abmelden",
+  "menu": "Menü",
+  "copyright": "© {{year}} {{domain}} Alle Rechte vorbehalten.",
+  "sidebar_home": "Startseite",
+  "sidebar_close": "Schließen",
+  "home_welcome": "Willkommen bei Specnazz IT",
+  "home_tagline": "Darius Visockis - Fachinformatiker Systemintegration",
+  "home_location": "Geboren 1992.02.20 | Wohnhaft in Bremerhaven, Deutschland",
+  "home_intro1": "Unter Nutzung der Effizienz und Präzision von \"Spezialeinheiten in der IT\" ist dies mein digitales Hauptquartier. Als angehender Fachinformatiker Systemintegration konzentriere ich mich auf die Bereitstellung robuster Lösungen, effiziente Problembehebung und kontinuierliches Lernen in den Bereichen Server, Netzwerktechnik, Programmierung, Cloud Computing und insbesondere <span class=\"security-highlight\">AWS-Sicherheit</span>.",
+  "home_intro2": "Erkunden Sie mein Portfolio, um Projekte zu sehen, Codebeispiele (Python, C++, Java) durchzusehen und Arbeiten mit Mikrocontrollern und KI-Tools zu entdecken. Diese Seite zeigt meine Fähigkeiten, meinen Werdegang und mein Engagement für die Absicherung und Optimierung von IT-Systemen.",
+  "home_cta_projects": "Projekte ansehen",
+  "home_cta_contact": "Kontakten",
+  "home_cta_about": "Mehr erfahren",
+  "page_heading": "Seite {{pageNum}}",
+  "page_content": "Dies ist der Inhalt für Seite {{pageNum}}.",
+  "page_blank": "Diese Seite ist derzeit leer."
+}

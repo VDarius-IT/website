@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="<%= i18n.language %>"> <!-- Set lang attribute dynamically -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= t(typeof titleKey !== 'undefined' ? titleKey : 'home_page_title', typeof titleOptions !== 'undefined' ? titleOptions : {}) %></title> <!-- Translate title using passed key/options -->
+    <link rel="stylesheet" href="/css/style.css">
+    <script>
+      // Immediately invoked function to set theme class on <html> tag
+      (function() {
+        const theme = localStorage.getItem('theme') || 'dark-mode'; // Default to dark
+        document.documentElement.className = theme; // Apply class to <html>
+      })();
+    </script>
+</head>
+<body> <!-- Removed data-current-lang -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="header-left"> <!-- Left Group -->
+                <button id="theme-toggle-button"><span id="theme-icon"></span></button> <!-- Icon will be set by JS -->
+                <a href="/" class="site-title">SpecNazz.IT.com</a>
+                <span class="site-version">                          Version 0.4 - Node.js</span>
+            </div>
+            <div class="header-right"> <!-- Right Group -->
+                <!-- Language switcher moved back to footer -->
+                <div class="auth-section"> <!-- Keep auth elements together -->
+                    <button id="login-button"><%= t('login') %></button>
+                    <!-- User/Account interface placeholder - shown after login -->
+                    <div id="user-account" style="display: none;">
+                        <span><%= t('welcome_user') %></span> | <a href="#"><%= t('account') %></a> | <button id="logout-button"><%= t('logout') %></button>
+                    </div>
+                </div>
+                <button id="menu-toggle-button"><%= t('menu') %></button>
+            </div>
+        </div>
+    </header>
+    <main class="site-content">

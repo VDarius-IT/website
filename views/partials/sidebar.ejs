@@ -1,0 +1,11 @@
+<aside id="sidebar" class="sidebar">
+    <nav>
+        <ul>
+            <li><a href="/"><%= t('sidebar_home') %></a></li>
+            <% for(let i = 1; i <= 10; i++) { %>
+                <li><a href="/page<%= i %>"><%= t('page_title', { pageNum: i }) %></a></li>
+            <% } %>
+        </ul>
+    </nav>
+    <button id="close-sidebar-button"><%= t('sidebar_close') %></button>
+</aside>

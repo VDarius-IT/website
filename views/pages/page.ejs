@@ -1,0 +1,8 @@
+<%- include('../partials/header', { titleKey: 'page_title', titleOptions: { pageNum: pageNum }, t: t, i18n: i18n }) %> <!-- Pass key, options, t func, and i18n -->
+<%- include('../partials/sidebar') %>
+
+<h1><%= t('page_heading', { pageNum: pageNum }) %></h1> <!-- Use translated heading -->
+<p><%= t('page_content', { pageNum: pageNum }) %></p> <!-- Use translated content -->
+<p><%= t('page_blank') %></p> <!-- Use translated content -->
+
+<%- include('../partials/footer') %>
