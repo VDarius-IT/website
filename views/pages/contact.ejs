@@ -1,0 +1,58 @@
+<![CDATA[<%- include('../partials/header', { titleKey: 'nav_contact', t: t, i18n: i18n }) %> <!-- Pass t and i18n -->
+<%- include('../partials/sidebar') %>
+
+<!-- Original contact.ejs content below -->
+<!-- Removed inline style blocks -->
+
+    <div class="contact-container">
+        <!-- Contact Content -->
+        <section class="contact-section">
+            <h2><%= t('contact_info_title', 'Contact Information') %></h2>
+
+            <div class="contact-method">
+                <div class="contact-icon">✉️</div>
+                <div>
+                    <h3><%= t('contact_email_label', 'Email') %></h3>
+                    <a href="mailto:VDarius.it@gmail.com" class="contact-link">VDarius.it@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="contact-method">
+                <div class="contact-icon">📱</div>
+                <div>
+                    <h3><%= t('contact_whatsapp_label', 'WhatsApp') %></h3>
+                    <a href="https://wa.me/+4916091005663" class="contact-link"><%= t('contact_whatsapp_link', 'Chat on WhatsApp') %></a>
+                </div>
+            </div>
+
+            <div class="contact-method">
+                <div class="contact-icon">💻</div>
+                <div>
+                    <h3><%= t('contact_github_label', 'GitHub') %></h3>
+                    <a href="https://github.com/SpecNazz-IT" class="contact-link"><%= t('contact_github_link', 'View my projects on GitHub') %></a>
+                </div>
+            </div>
+
+            <div class="contact-method">
+                <div class="contact-icon">🔗</div>
+                <div>
+                    <h3><%= t('contact_linkedin_label', 'LinkedIn') %></h3>
+                    <a href="https://www.linkedin.com/in/VDariusIT/" class="contact-link"><%= t('contact_linkedin_link', 'Connect on LinkedIn') %></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2><%= t('contact_services_title', 'System Integration Services') %></h2>
+            <p><%= t('contact_services_desc', 'For professional inquiries regarding system integration services, please contact me through any of the channels above.') %></p>
+        </section>
+
+        <!-- Link to Donations Page -->
+        <section class="contact-section">
+            <p><a href="/donations" class="contact-link"><%= t('contact_donate_link') %></a></p>
+        </section>
+
+    </div>
+<!-- End of original contact.ejs content -->
+
+<%- include('../partials/footer') %>

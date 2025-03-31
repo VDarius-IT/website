@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="<%= i18n.language %>">
+<head>
+    <%- include('../partials/header') %>
+    <title><%= t('donations.title') %></title>
+</head>
+<body>
+    <div class="container">
+        <%- include('../partials/sidebar') %>
+        <div class="main-content">
+            <h1><%= t('donations_title') %></h1>
+            <p><%= t('donations_intro') %></p>
+
+            <hr/>
+
+            <!-- Donations Content -->
+            <section class="donation-section">
+                <div class="payment-method">
+                    <div class="payment-icon">💳</div>
+                    <div class="payment-info">
+                        <h3><%= t('donations_paypal_label') %></h3>
+                        <p><%= t('donations_paypal_desc') %></p>
+                        <a href="https://paypal.me/specnazzit" class="payment-link"><%= t('donations_paypal_link') %></a>
+                    </div>
+                </div>
+
+                <div class="payment-method">
+                    <div class="payment-icon">₿</div>
+                    <div class="payment-info">
+                        <h3><%= t('donations_btc_label') %></h3>
+                        <p><%= t('donations_btc_desc') %></p>
+                        <div class="payment-address">3LPxbrATWZFzsQ9MSADw9MnvYiBTcvK66Z</div>
+                    </div>
+                </div>
+
+                <div class="payment-method">
+                    <div class="payment-icon">⟠</div>
+                    <div class="payment-info">
+                        <h3><%= t('donations_eth_label') %></h3>
+                        <p><%= t('donations_eth_desc') %></p>
+                        <div class="payment-address">0x2D2a3c99bD3abAbaeAC7E35c884f06C3154550dE</div>
+                    </div>
+                </div>
+
+                <div class="payment-method">
+                    <div class="payment-icon">◎</div>
+                    <div class="payment-info">
+                        <h3><%= t('donations_sol_label') %></h3>
+                        <p><%= t('donations_sol_desc') %></p>
+                        <div class="payment-address">GycWDeT1Ro2ekDpurosGgP94N4RPDJHgV5HS7QdrU5eJ</div>
+                    </div>
+                </div>
+
+                <div class="payment-method">
+                    <div class="payment-icon">Ð</div>
+                    <div class="payment-info">
+                        <h3><%= t('donations_doge_label') %></h3>
+                        <p><%= t('donations_doge_desc') %></p>
+                        <div class="payment-address">DFebzJgZci76C2gD5CHyEAqrZfrKPEsKeD</div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="thank-you">
+                <p><%= t('donations_thanks') %></p>
+            </div>
+
+            <button onclick="history.back()"><%= t('donations_goBack') %></button>
+        </div>
+    </div>
+    <%- include('../partials/footer') %>
+</body>
+</html>

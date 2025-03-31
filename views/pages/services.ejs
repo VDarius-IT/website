@@ -1,0 +1,65 @@
+<![CDATA[<%- include('../partials/header', { titleKey: 'nav_services', t: t, i18n: i18n }) %> <!-- Pass t and i18n -->
+<%- include('../partials/sidebar') %>
+
+<!-- Original services.ejs content below -->
+<!-- Removed inline style block -->
+
+<section id="services-overview">
+  <h2><%= t('services_title', 'IT Services & Technical Skills') %></h2>
+  <p>
+    <%= t('services_intro_p1', 'As a Fachinformatiker Systemintegration trainee applying the "Specnazz IT" principles (efficiency, precision, adaptability), I offer services focused on robust IT infrastructure and security. My expertise spans system administration, networking, programming, virtualization, and particularly') %> <span class="security-highlight"><%= t('services_intro_highlight', 'AWS Cloud Security') %></span>.
+  </p>
+</section>
+
+<section id="service-list">
+
+  <div class="service-item">
+    <h3><%= t('services_cloud_title', 'Secure Cloud Infrastructure (AWS Focus)') %></h3>
+    <p><%= t('services_cloud_desc', 'Design, deployment, and management of secure and scalable cloud environments on AWS. Implementation of') %> <span
+        class="security-highlight"><%= t('services_cloud_highlight', 'multi-layered security controls') %></span> <%= t('services_cloud_desc_cont', 'including network segmentation, access management, and threat detection.') %></p>
+    <p class="tech-focus"><%= t('services_cloud_focus', 'Focus') %>: <code>AWS VPC</code>, <code>EC2</code>, <code>S3</code>, <code>IAM</code>, <code
+        class="security-highlight">Security Groups</code>, <code class="security-highlight">Network ACLs</code>, <code
+        class="security-highlight">AWS WAF</code>, <code class="security-highlight">AWS Shield</code>, <code
+        class="security-highlight">GuardDuty</code>, <code>CloudWatch</code></p>
+  </div>
+
+  <div class="service-item">
+    <h3><%= t('services_automation_title', 'Automated Security & Compliance') %></h3>
+    <p><%= t('services_automation_desc', 'Implementing automated security checks, configuration management, and monitoring to ensure continuous compliance and rapid response to threats. Securing inbound/outbound traffic and protecting against common attacks.') %></p>
+    <p class="tech-focus"><%= t('services_automation_focus', 'Focus') %>: Scripting (<code>Python</code>, <code>Bash</code>), Infrastructure as Code (basics),
+      <code class="security-highlight">AWS Config</code>, <code class="security-highlight">Security Hub</code>
+      (concepts)</p>
+  </div>
+
+  <div class="service-item">
+    <h3><%= t('services_data_title', 'Data & Interface Security') %></h3>
+    <p><%= t('services_data_desc', 'Securing data storage and access, particularly within AWS S3, using policies, encryption, and access controls. Designing and securing application interfaces.') %></p>
+    <p class="tech-focus"><%= t('services_data_focus', 'Focus') %>: <code class="security-highlight">S3 Bucket Policies</code>, Encryption (at rest, in
+      transit), <code class="security-highlight">IAM Roles/Policies</code>, API Gateway Security, VPC Endpoints</p>
+  </div>
+
+  <div class="service-item">
+    <h3><%= t('services_admin_title', 'System & Network Administration') %></h3>
+    <p><%= t('services_admin_desc', 'Installation, configuration, hardening, and maintenance of Windows and Linux servers. Network setup, troubleshooting, and fundamental security practices.') %></p>
+    <p class="tech-focus"><%= t('services_admin_focus', 'Focus') %>: <code>Windows Server</code>, <code>Linux</code>, <code>TCP/IP</code>, <code>DNS</code>,
+      <code>DHCP</code>, Firewalls</p>
+  </div>
+
+  <div class="service-item">
+    <h3><%= t('services_programming_title', 'Programming & Scripting') %></h3>
+    <p><%= t('services_programming_desc', 'Development of custom tools and scripts for automation, data processing, and system integration. Proficiency in multiple programming languages and scripting environments.') %></p>
+    <p class="tech-focus"><%= t('services_programming_focus', 'Focus') %>: <code>Python</code>, <code>Bash</code>, <code>PowerShell</code>, <code>C++</code>,
+      <code>Java</code>, <code>HTML</code>, <code>CSS</code>, <code>JavaScript</code></p>
+  </div>
+
+  <div class="service-item">
+    <h3><%= t('services_virt_title', 'Virtualization & Containerization') %></h3>
+    <p><%= t('services_virt_desc', 'Implementation and management of virtualized environments using VMware and containerized applications using Docker and Kubernetes.') %></p>
+    <p class="tech-focus"><%= t('services_virt_focus', 'Focus') %>: <code>VMware vSphere</code>, <code>Docker</code>, <code>Kubernetes</code>,
+      <code>Container Orchestration</code></p>
+  </div>
+
+</section>
+<!-- End of original services.ejs content -->
+
+<%- include('../partials/footer') %>

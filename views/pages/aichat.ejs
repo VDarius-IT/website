@@ -1,0 +1,66 @@
+<![CDATA[<%- include('../partials/header', { titleKey: 'nav_aichat', t: t, i18n: i18n }) %> <!-- Pass t and i18n -->
+<%- include('../partials/sidebar') %>
+
+<!-- Original aichat.ejs content below -->
+<!-- Removed inline style block -->
+
+    <div class="ai-chat-container">
+        <div class="coming-soon">
+            <h2>🚀 <%= t('aichat_coming_soon_title', 'AI Chat Functionality Coming Soon!') %></h2>
+            <p><%= t('aichat_coming_soon_desc', 'We\'re currently working hard to bring you an advanced AI chat experience. Stay tuned for updates!') %></p>
+        </div>
+
+        <section class="ai-section">
+            <h2><%= t('aichat_about_title', 'About Our AI Chat') %></h2>
+            <p><%= t('aichat_about_desc', 'Our upcoming AI chat feature will allow you to interact with cutting-edge artificial intelligence models, getting helpful, creative, and informative responses to your queries.') %></p>
+        </section>
+
+        <section class="ai-section">
+            <h2><%= t('aichat_capabilities_title', 'Current Capabilities (Planned)') %></h2>
+            <ul>
+                <li><%= t('aichat_capabilities_1', 'Natural language conversations') %></li>
+                <li><%= t('aichat_capabilities_2', 'Technical question answering') %></li>
+                <li><%= t('aichat_capabilities_3', 'Creative writing assistance') %></li>
+                <li><%= t('aichat_capabilities_4', 'Code generation and explanation') %></li>
+                <li><%= t('aichat_capabilities_5', 'Multi-language support') %></li>
+            </ul>
+        </section>
+
+        <section class="ai-section">
+            <h2><%= t('aichat_models_title', 'Popular AI Models') %></h2>
+            <p><%= t('aichat_models_desc', 'We plan to integrate with these leading AI technologies:') %></p>
+            <div class="model-list">
+                <div class="model-card">
+                    <h3>GPT-4</h3>
+                    <p><%= t('aichat_models_gpt4', 'OpenAI\'s most advanced model with broad general knowledge and domain expertise.') %></p>
+                </div>
+                <div class="model-card">
+                    <h3>Claude 3</h3>
+                    <p><%= t('aichat_models_claude3', 'Anthropic\'s conversational AI focused on helpfulness and harmlessness.') %></p>
+                </div>
+                <div class="model-card">
+                    <h3>Llama 3</h3>
+                    <p><%= t('aichat_models_llama3', 'Meta\'s open-weight large language model.') %></p>
+                </div>
+                <div class="model-card">
+                    <h3>Gemini</h3>
+                    <p><%= t('aichat_models_gemini', 'Google\'s multimodal AI capable of understanding text, images, and more.') %></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="ai-section">
+            <h2><%= t('aichat_future_title', 'Future Possibilities') %></h2>
+            <p><%= t('aichat_future_desc', 'As AI technology advances, we plan to incorporate:') %></p>
+            <ul>
+                <li><%= t('aichat_future_1', 'Voice interaction capabilities') %></li>
+                <li><%= t('aichat_future_2', 'Personalized learning assistants') %></li>
+                <li><%= t('aichat_future_3', 'Real-time collaboration features') %></li>
+                <li><%= t('aichat_future_4', 'Integration with development environments') %></li>
+                <li><%= t('aichat_future_5', 'Customizable AI personalities') %></li>
+            </ul>
+        </section>
+    </div>
+<!-- End of original aichat.ejs content -->
+
+<%- include('../partials/footer') %>

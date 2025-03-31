@@ -1,0 +1,98 @@
+<%- include('../partials/header', { titleKey: 'nav_projects', t: t, i18n: i18n }) %> <!-- Pass t and i18n -->
+<%- include('../partials/sidebar', { t: t, i18n: i18n }) %> <!-- Pass t and i18n -->
+
+<!-- Original projects.ejs content below -->
+<!-- Removed inline style block for testing -->
+
+<section id="completed-projects">
+  <h2><%= t('projects_title', 'Completed Projects') %></h2>
+  <p><%= t('projects_intro', 'A selection of projects demonstrating skills in system integration, security, programming, and more.') %></p>
+  <div class="project-grid">
+
+    <div class="project-card">
+      <img src="/images/aws.jpg" alt="<%= t('projects_aws_alt', 'AWS Security Setup') %>"/>
+      <div class="project-content">
+        <h3><%= t('projects_aws_title', 'AWS Secure VPC Deployment') %></h3>
+        <p><%= t('projects_aws_desc', 'Designed and implemented a secure Virtual Private Cloud (VPC) on AWS with public/private subnets, Security Groups acting as stateful firewalls, and Network ACLs for stateless traffic filtering. Configured secure routing and internet access via NAT Gateway.') %></p>
+        <div class="tech-used">
+          <span>AWS</span>
+          <span>VPC</span>
+          <span>Security Groups</span>
+          <span>Network ACL</span>
+          <span>NAT Gateway</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="/images/stack.jpg" alt="<%= t('projects_elk_alt', 'Network Monitoring Dashboard') %>"/>
+      <div class="project-content">
+        <h3><%= t('projects_elk_title', 'Central Network Monitoring with ELK Stack') %></h3>
+        <p><%= t('projects_elk_desc', 'Built a central network monitoring solution using the ELK Stack (Elasticsearch, Logstash, Kibana) to collect, analyze, and visualize network data. Implemented dashboards for real-time monitoring of network activity and anomaly detection.') %></p>
+        <div class="tech-used">
+          <span>ELK Stack</span>
+          <span>Elasticsearch</span>
+          <span>Logstash</span>
+          <span>Kibana</span>
+          <span>Network Monitoring</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="/images/siem.jpg" alt="<%= t('projects_siem_alt', 'SIEM Implementation') %>"/>
+      <div class="project-content">
+        <h3><%= t('projects_siem_title', 'SIEM System Implementation') %></h3>
+        <p><%= t('projects_siem_desc', 'Designed and implemented a Security Information and Event Management (SIEM) system for centralized logging and security analysis. Integrated various data sources to detect security incidents and automate response measures.') %></p>
+        <div class="tech-used">
+          <span>SIEM</span>
+          <span>Security Analysis</span>
+          <span>Log Management</span>
+          <span>Automation</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="/images/python.jpg" alt="<%= t('projects_python_alt', 'Python Scripting') %>"/>
+      <div class="project-content">
+        <h3><%= t('projects_python_title', 'Python Scripting for System Automation') %></h3>
+        <p><%= t('projects_python_desc', 'Developed Python scripts to automate recurring system administration tasks, such as user management, data backup, and system monitoring. Used libraries like `os`, `subprocess`, and `schedule`.') %></p>
+        <div class="tech-used">
+          <span>Python</span>
+          <span>Automation</span>
+          <span>Scripting</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="/images/java.jpg" alt="<%= t('projects_java_alt', 'Java Application') %>"/>
+      <div class="project-content">
+        <h3><%= t('projects_java_title', 'Development of a Java Application for Data Analysis') %></h3>
+        <p><%= t('projects_java_desc', 'Designed and developed a Java application for analyzing large datasets. Implemented algorithms for data cleaning, transformation, and visualization. Used libraries like Apache Commons Math and JFreeChart.') %></p>
+        <div class="tech-used">
+          <span>Java</span>
+          <span>Data Analysis</span>
+          <span>Algorithms</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="/images/hw.jpg" alt="<%= t('projects_cpp_alt', 'C++ Project') %>"/>
+      <div class="project-content">
+        <h3><%= t('projects_cpp_title', 'Creation of a C++ Program for Embedded Systems') %></h3>
+        <p><%= t('projects_cpp_desc', 'Developed a C++ program to control hardware components in embedded systems. Optimized the code for real-time requirements and low resource consumption. Used hardware-related libraries and drivers.') %></p>
+        <div class="tech-used">
+          <span>C++</span>
+          <span>Embedded Systems</span>
+          <span>Real-time Programming</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End of original projects.ejs content -->
+
+<%- include('../partials/footer', { t: t, i18n: i18n }) %> <!-- Pass t and i18n -->

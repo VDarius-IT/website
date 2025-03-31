@@ -1,8 +1,8 @@
-<%- include('../partials/header', { title: 'Page 5' }) %>
+<%- include('../partials/header', { titleKey: 'contact_page_title', t: t, i18n: i18n }) %>
 <%- include('../partials/sidebar') %>
 
-<h1>Page 5</h1>
-<p>This is the content for Page 5.</p>
-<p>This page is currently blank.</p>
+<section id="contact-page">
+  <%- pageContent %>
+</section>
 
 <%- include('../partials/footer') %>

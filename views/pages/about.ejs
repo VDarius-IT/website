@@ -1,0 +1,97 @@
+<%- include('../partials/header', { titleKey: 'nav_about', t: t, i18n: i18n }) %> <!-- Use about title key -->
+<%- include('../partials/sidebar') %>
+
+<!-- Content from about.ejs (inline styles + sections) -->
+<!-- Inline Styles -->
+    <style>
+        /* Specific styles for the "About" page */
+        .profile-photo-about {
+            float: right;
+            margin: 0 0 20px 20px;
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+            border: 3px solid var(--border-color);
+        }
+
+        .skills-list, .languages-list, .strengths-list, .hobbies-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .skills-list li, .languages-list li, .strengths-list li, .hobbies-list li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .skills-list li::before, .languages-list li::before, .strengths-list li::before, .hobbies-list li::before {
+            content: "\25AA"; /* Square bullet */
+            color: var(--btn-bg);
+            position: absolute;
+            left: 0;
+            font-size: 0.8em;
+            top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .profile-photo-about {
+                float: none;
+                display: block;
+                margin: 20px auto;
+            }
+        }
+
+        .aws-security-focus {
+            font-weight: bold;
+        }
+    </style>
+
+    <!-- Main content structure provided by index.html shell -->
+    <section id="about-intro">
+        <h2><%= t('about_title', 'About Me') %></h2>
+
+        <!-- Profile Photo -->
+        <img src="/images/Darius.jpg" alt="<%= t('about_photo_alt', 'Darius Visockis') %>" class="profile-photo-about" />
+
+        <p>
+            <%= t('about_intro_p1', 'Hello! I\'m Darius Visockis (born February 20, 1992), an IT specialist trainee based in Bremerhaven, Germany. I am currently completing an "Umschulung" to become a Fachinformatiker Systemintegration, driven by a deep passion for technology, innovation, and robust problem-solving.') %>
+        </p>
+        <p>
+            <%= t('about_intro_p2', 'This website serves as my personal portfolio, showcasing my journey, skills, projects, and enthusiasm for the ever-evolving world of Information Technology. My approach, themed "Specnazz IT," emphasizes efficiency, precision, and adaptability – like special forces for your tech challenges, particularly strong in securing cloud environments.') %>
+        </p>
+    </section>
+
+    <section id="my-skills">
+        <h2><%= t('about_skills_title', 'IT Skills') %></h2>
+        <ul class="skills-list">
+            <li><strong><%= t('about_skills_server', 'Server Administration') %>:</strong> Windows Server, Linux Server</li>
+            <li><strong><%= t('about_skills_programming', 'Programming/Scripting') %>:</strong> C++, Python, Java, HTML</li>
+            <li><strong><%= t('about_skills_db', 'Databases') %>:</strong> MySQL</li>
+            <li><strong><%= t('about_skills_devops', 'DevOps & Tools') %>:</strong> Git, Docker</li>
+            <li><strong><%= t('about_skills_network', 'Networking') %>:</strong> TCP/IP, DNS, DHCP, Network Security Fundamentals</li>
+            <li><strong><%= t('about_skills_virt', 'Virtualization') %>:</strong> VMware, Hyper-V</li>
+            <li>
+                <strong><%= t('about_skills_cloud', 'Cloud Computing (AWS)') %>:</strong>
+                <ul>
+                    <li><%= t('about_skills_cloud_core', 'Core Services (EC2, S3, VPC, IAM)') %></li>
+                    <li class="aws-security-focus">
+                        <strong><%= t('about_skills_cloud_security_title', 'AWS Security Specialist') %>:</strong>
+                        <ul>
+                           <li><%= t('about_skills_cloud_security_sg', 'Security Groups & Network ACLs (Firewalling)') %></li>
+                           <li><%= t('about_skills_cloud_security_waf', 'AWS WAF & Shield (DDoS & Application Protection)') %></li>
+                           <li><%= t('about_skills_cloud_security_monitor', 'Automated Security Monitoring & Alerting (CloudWatch, GuardDuty)') %></li>
+                           <li><%= t('about_skills_cloud_security_s3', 'Secure S3 Bucket Policies & Access Control') %></li>
+                           <li><%= t('about_skills_cloud_security_iam', 'Identity and Access Management (IAM) Best Practices') %></li>
+                           <li><%= t('about_skills_cloud_security_api', 'Secure Interface Design (API Gateway, VPC Endpoints)') %></li>
+                           <li><%= t('about_skills_cloud_security_malware', 'Malware Protection Strategies on AWS') %></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><strong><%= t('about_skills_micro', 'Microcontrollers') %>:</strong> Arduino, ESP32</li>
+        </ul>
+    </section>
+<!-- End of content from about.ejs -->
+
+<%- include('../partials/footer') %>

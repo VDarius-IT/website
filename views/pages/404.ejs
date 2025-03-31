@@ -1,0 +1,34 @@
+<%- include('../partials/header', { titleKey: '404_title', t: t, i18n: i18n }) %> <!-- Pass t and i18n -->
+<%- include('../partials/sidebar', { t: t, i18n: i18n }) %> <!-- Pass t and i18n -->
+
+<!-- Original 404.ejs content below -->
+<!-- Inline Styles -->
+    <style>
+        #error-page {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #error-page h2 {
+            color: var(--error-color); /* Assuming --error-color is defined in main CSS */
+        }
+
+        #error-page a {
+            color: var(--btn-bg); /* Assuming --btn-bg is defined */
+            font-weight: bold;
+        }
+    </style>
+
+<div id="error-page">
+    <h2><%= t('404_title', '404 - Page Not Found') %></h2>
+    <p><%= t('404_message', 'Sorry, the page you are looking for does not exist.') %></p>
+    <p>
+        <%= t('404_go_back', 'Go back to') %>
+        <a href="/">
+            <%= t('404_homepage_link', 'Homepage') %>
+        </a>.
+    </p>
+</div>
+<!-- End of original 404.ejs content -->
+
+<%- include('../partials/footer', { t: t, i18n: i18n }) %> <!-- Pass t and i18n -->

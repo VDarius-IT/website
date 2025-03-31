@@ -1,11 +1,14 @@
 <aside id="sidebar" class="sidebar">
     <nav>
         <ul>
-            <li><a href="/"><%= t('sidebar_home') %></a></li>
-            <% for(let i = 1; i <= 10; i++) { %>
-                <li><a href="/page<%= i %>"><%= t('page_title', { pageNum: i }) %></a></li>
-            <% } %>
+            <li><a href="/"><%= t('nav_home', 'Home') %></a></li>
+            <li><a href="/about"><%= t('nav_about', 'About') %></a></li>
+            <li><a href="/projects"><%= t('nav_projects', 'Projects') %></a></li>
+            <li><a href="/services"><%= t('nav_services', 'Services') %></a></li>
+            <li><a href="/aichat"><%= t('nav_aichat', 'AI Chat') %></a></li>
+            <li><a href="/contact"><%= t('nav_contact', 'Contact') %></a></li>
+            <!-- Removed loop for page1-10 -->
         </ul>
     </nav>
-    <button id="close-sidebar-button"><%= t('sidebar_close') %></button>
+    <button id="close-sidebar-button"><%= t('sidebar_close', 'Close') %></button>
 </aside>
