@@ -171,7 +171,7 @@ body {
 
 /* Theme Modes */
 html.light-mode body { /* Target body within html.light-mode */
-    background-color: #f2fcff;
+    background-color:  #f2fcff;
     color: #333333;
 }
 html.light-mode .site-header,
@@ -689,4 +689,194 @@ html.dark-mode .security-highlight { color: #80bdff; } /* Lighter blue for dark 
 #error-page a {
     color: var(--btn-bg);
     font-weight: bold;
+}
+
+/* ================================== */
+/* AI Chat Interface Styles           */
+/* ================================== */
+
+.chat-controls {
+    display: flex;
+    /* justify-content: space-between; */ /* Let items flow naturally */
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center;
+    /* padding: 10px 20px; */ /* Remove padding */
+    margin: 10px auto 20px auto; /* Adjust bottom margin */
+    max-width: 800px; /* Match chat container width */
+    /* background-color: var(--card-bg, #f8f9fa); */ /* Remove background */
+    /* border: 1px solid var(--border-color, #ccc); */ /* Remove border */
+    /* border-radius: 8px; */ /* Remove border-radius */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px; /* Increase gap slightly */
+}
+
+.chat-controls fieldset {
+    border: none; /* Keep borderless */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between legend and radios */
+}
+
+.chat-controls legend {
+    font-weight: bold;
+    padding-right: 5px; /* Space after legend */
+}
+
+.chat-controls input[type="radio"],
+.chat-controls input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.chat-controls label {
+    cursor: pointer;
+    margin-right: 10px; /* Space between radio options */
+}
+
+#sub-model-select {
+    padding: 5px 8px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color, #ccc);
+    background-color: var(--input-bg, #fff);
+    color: var(--text-color, #333);
+    margin-left: 10px; /* Space after provider selection */
+    min-width: 150px; /* Give it some base width */
+}
+
+.mock-toggle {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push mock toggle to the right */
+}
+
+/* Theme overrides for controls */
+html.dark-mode .chat-controls {
+    /* background-color: var(--card-bg, #333); */ /* Removed */
+    /* border-color: var(--border-color, #555); */ /* Removed */
+}
+html.dark-mode #sub-model-select {
+    background-color: var(--input-bg, #444);
+    color: var(--text-color, #f1f1f1);
+    border-color: var(--border-color, #555);
+}
+
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 180px); /* Adjust based on header/footer/padding */
+    max-width: 800px;
+    margin: 20px auto;
+    border: 1px solid var(--border-color, #ccc);
+    border-radius: 8px;
+    overflow: hidden; /* Contain children */
+    background-color: var(--card-bg, #fff); /* Use card background or fallback */
+}
+
+.chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between messages */
+}
+
+.message {
+    padding: 8px 12px;
+    border-radius: 15px;
+    max-width: 75%;
+    line-height: 1.4;
+    word-wrap: break-word; /* Ensure long words break */
+}
+
+.user-message {
+    background-color: var(--btn-bg, #007bff); /* Use button background or fallback */
+    color: var(--btn-text-color, #fff); /* Use button text color or fallback */
+    align-self: flex-end;
+    border-bottom-right-radius: 5px; /* Slightly different shape */
+}
+
+.ai-message {
+    background-color: var(--code-bg, #f1f1f1); /* Use code background or fallback */
+    color: var(--code-text, #333); /* Use code text color or fallback */
+    align-self: flex-start;
+    border: 1px solid var(--border-color, #ccc);
+    border-bottom-left-radius: 5px; /* Slightly different shape */
+}
+
+.system-message {
+    font-style: italic;
+    color: var(--text-secondary-color, #666); /* Use secondary text color or fallback */
+    font-size: 0.9em;
+    text-align: center;
+    align-self: center;
+    background-color: transparent;
+    padding: 5px;
+    max-width: 90%;
+}
+
+.chat-input-area {
+    display: flex;
+    align-items: center; /* Vertically center items */
+    padding: 10px;
+    border-top: 1px solid var(--border-color, #ccc);
+    background-color: var(--bg-color, #f9f9f9); /* Use main background or fallback */
+}
+
+#chat-input {
+    flex-grow: 1;
+    box-sizing: border-box; /* Ensure padding is included in height */
+    line-height: normal; /* Ensure text vertical alignment */
+    padding: 10px;
+    border: 1px solid var(--border-color, #ccc);
+    border-radius: 20px; /* Rounded input */
+    margin-right: 10px;
+    background-color: var(--input-bg, #fff); /* Use specific input bg or fallback */
+    color: var(--text-color, #333);
+}
+
+#chat-input:focus {
+    outline: none;
+    border-color: var(--btn-bg, #007bff);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Example focus */
+}
+
+#send-button {
+    /* padding: 10px 15px; */ /* Remove explicit padding, rely on theme/defaults */
+    border-radius: 20px; /* Match input rounding */
+    cursor: pointer;
+    /* Inherit theme button styles */
+    /* Ensure button text is centered if needed */
+    line-height: normal; /* Or match input's calculated height */
+    height: 40px; /* Example: Match typical input height with padding */
+    box-sizing: border-box;
+}
+
+/* Theme specific overrides for chat */
+html.dark-mode .chat-container {
+    background-color: var(--card-bg, #333);
+    border-color: var(--border-color, #555);
+}
+html.dark-mode .chat-input-area {
+    background-color: var(--bg-color, #272847);
+    border-top-color: var(--border-color, #555);
+}
+html.dark-mode #chat-input {
+    background-color: var(--input-bg, #444);
+    color: var(--text-color, #f1f1f1);
+    border-color: var(--border-color, #555);
+}
+html.dark-mode .ai-message {
+    background-color: var(--code-bg, #4a4a68); /* Slightly different dark AI bubble */
+    color: var(--code-text, #f1f1f1);
+    border-color: var(--border-color, #555);
+}
+html.dark-mode .system-message {
+    color: var(--text-secondary-color, #aaa);
+}
+html.dark-mode #chat-input:focus {
+     box-shadow: 0 0 0 2px rgba(97, 218, 251, 0.25); /* Example dark focus */
+     border-color: var(--btn-bg, #61dafb);
 }
