@@ -12,7 +12,7 @@ This guide provides step-by-step instructions to deploy your Node.js application
 
 **Step 1: Connect to Your EC2 Instance**
 
-Open your local terminal or command prompt and use the SSH command to connect. Replace `your_key_pair.pem`, `ubuntu` (use `ec2-user` for Amazon Linux), and `your_ec2_ip_or_domain` with your actual values.
+Open your local terminal or command prompt and use the SSH command to connect. Replace `your_key_pair.pem`, `ubuntu` (use `ec2-user` for Amazon Linux), and `your_ec2_ip_or_domain` with your actual values
 
 ```bash
 ssh -i /path/to/your_key_pair.pem ubuntu@your_ec2_ip_or_domain
